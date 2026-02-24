@@ -50,6 +50,7 @@ pipeline {
                 sleep time: 10, unit: 'SECONDS'
     }
 }
+    }
 
 
 
