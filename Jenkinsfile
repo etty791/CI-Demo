@@ -5,7 +5,7 @@ pipeline {
 
     }
     options{
-        timeout(time: 100, unit: 'SECONDS')
+        timeout(time: 10, unit: 'SECONDS')
     }
     stages {
       //   stage('connect to github'){
@@ -43,5 +43,6 @@ pipeline {
         }
     }
 }
+
 
 
