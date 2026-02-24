@@ -44,13 +44,18 @@ pipeline {
         }
         stage('Parallel'){
             stage('one'){
-                sleep time: 10, unit: 'SECONDS'
-    }
+                steps{
+                    sleep time: 10, unit: 'SECONDS'
+                }
+            }
              stage('two'){
-                sleep time: 10, unit: 'SECONDS'
+                 steps:{
+                     sleep time: 10, unit: 'SECONDS'
+                 }
+            }
+        }
     }
-}
-    }
+
 
 
 
