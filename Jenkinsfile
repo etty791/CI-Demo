@@ -6,6 +6,7 @@ pipeline {
     }
     options{
         timeout(time: 10, unit: 'SECONDS')
+        buildDiscarder(logRotator(numToKeepStr:'5'))
     }
     stages {
         stage('connect to github'){
@@ -41,8 +42,15 @@ pipeline {
                 echo 'The second steps'
             }
         }
+        stage('Parallel'){
+            stage('one'){
+                sleep time: 10, unit: 'SECONDS'
+    }
+             stage('two'){
+                sleep time: 10, unit: 'SECONDS'
     }
 }
+
 
 
 
